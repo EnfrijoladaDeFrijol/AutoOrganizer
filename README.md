@@ -1,2 +1,3 @@
-# Auto_organizer
-Organizador para hacer más eficiente el acomodo de archivos en distintas carpetas en Linux
+# :file_folder: Auto Organizer
+## :pencil: Descripción:
+Programa que automátiza la organización de los archivos que se encuentran en cierto direcotorio, moviendólos a ciertos directorios deseados
