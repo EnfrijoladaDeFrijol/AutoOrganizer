@@ -1,14 +1,32 @@
+#!/bin/bash
+
+# -f es para archivos
+# -d direcotiro exsite?
+# -e existe
 
 imprimirTitulo(){
-    printf "\t   ___                     _            _         "
-    printf "\t  / _ \ _ _ __ _ __ _ _ _ (_)_____ _ __| |___ _ _ "
-    printf "\t | (_) | '_/ _` !  ` | ' \| |_ / _` !  ` / _ \ '_!"
-    printf "\t  \___/|_| \__, \__,_|_||_|_/__\__,_\__,_\___/_|  "
-    printf "\t           |___/                                  "
+    printf "\t  _____                 _           _         \n" # Rectangles 
+    printf "\t |     |___ ___ ___ ___|_|___ ___ _| |___ ___ \n"
+    printf "\t |  |  |  _| . | .'|   | |- _| .'| . | . |  _|\n"
+    printf "\t |_____|_| |_  |__,|_|_|_|___|__,|___|___|_|  \n"
+    printf "\t           |___|                              \n"
 }
 
+imprimirLinea(){
+    printf "\n\t --------------------------------------------- \n"
+}
+
+solicitarCarpeta(){
+    printf "\n\t Carpeta que desea organizar: "
+    read carpeta
+}
+
+
+
 main(){
-    printf " O R G A N I Z A D O R "
+    imprimirTitulo
+    imprimirLinea
+    solicitarCarpeta
 }
 
 main
