@@ -1,4 +1,6 @@
-# :file_folder: Auto Organizer
+
+<h1 align="center">Auto Organizer :file_folder:</h1>
+
 ## :pencil: Descripción:
 Programa que automátiza la organización de los archivos que se encuentran en cierto direcotorio, moviendólos a ciertos directorios deseados
 
