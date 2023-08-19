@@ -22,7 +22,15 @@ solicitarNombreCarpeta(){
 }
 
 borrarCache(){
-    rm -r ~/.cache/pip/
+    printf "\t Verificando Cache...\n"
+    ubiCache=$(find ~/ -name "pip")
+    #echo $ubiCache
+    if [ -d "$ubiCache" ]
+    then
+        rm -r ~/.cache/pip/
+    else
+        true
+    fi
 }
 
 # función que trabaja con una bandera para saber si existe 
@@ -49,17 +57,17 @@ buscarCarpeta(){
 
 # Verifica si ya existen las carpetas en el sistema
 validarCarpetaOrganizada(){
-    ubiCarpetaOrganizada=$(find ~/ -name "Archivos_organizados")
-    #echo $ubiCarpetaOrganizada asdfasd
+    ubiCarpetaOrganizada=$(find ~/Documentos -name "Archivos_organizados")
+    #echo $ubiCarpetaOrganizada 
     printf "\t Verificando información...\n"
     sleep 1.5
     if [ -d "$ubiCarpetaOrganizada" ]
     then # Carpeta organizada existe
-        printf "\n\t Ya existe la carpeta\n"
+        printf "\t Ya existe la carpeta organizada\n"
     else # Carpeta organizada no existe
         printf "\t Crando carpetas...\n"
         sleep 0.5
-        #mkdir ~/Documentos/Archivos_organizados
+        mkdir ~/Documentos/Archivos_organizados
         printf "\t Se creó la carpeta organizada"        
     fi
 }
@@ -67,11 +75,11 @@ validarCarpetaOrganizada(){
 main(){
     imprimirTitulo
     imprimirLinea
-    #borrarCache
+    borrarCache
 
     solicitarNombreCarpeta
-    buscarCarpeta
-    printf "$bandera \n"
+    buscarCarpeta # Carpeta a oganizar
+    #printf "$bandera \n"
     
     validarCarpetaOrganizada
     
