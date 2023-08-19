@@ -20,3 +20,11 @@ chmod u+x organizador.sh
 </ol>
 
 <p align="justify">Es importante mencionar que este script creará carpetas en el sistema en la carpeta de documentos para poder organizar los archvios.</p>
+
+
+<h2 align="center">Consideraciones</h2>
+<ul>
+    <li>Fucniona si el sistema está en español (Se agregará la versión en ingles más adelante)</li>
+    <li>Se borrará eñl caché para el correcto funcionamiento del script</li>
+    
+</ul>
