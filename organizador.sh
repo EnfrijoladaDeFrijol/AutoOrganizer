@@ -41,7 +41,7 @@ buscarCarpeta(){
 
     # 1. Primero obtenemos la ubicación de la carpeta
     ubiCarpeta=$(find ~/ -name "$carpeta")
-    echo $ubiCarpeta
+    #echo $ubiCarpeta
 
     # 2. Valisamos que esa ubicación exista en el SO
     if [ -d "$ubiCarpeta" ] # La carpeta existe
@@ -86,12 +86,17 @@ main(){
     borrarCache
 
     solicitarNombreCarpeta # Carpeta a organizar
-    buscarCarpeta # Carpeta a oganizar
-    #printf "$bandera \n"
-    
-    validarCarpetaOrganizada # Carpeta donde se organizará (se crea)
+    buscarCarpeta # Carpeta a oganizar y se asigna bandera
 
-    ordenarArchivos # Mandamos a ordenar los archivos
+    if [ $bandera -eq 1 ]
+    then
+        #printf "$bandera \n"
+        validarCarpetaOrganizada # Carpeta donde se organizará (se crea)
+        ordenarArchivos # Mandamos a ordenar los archivos
+    else
+        printf "\t [Advertencia] No existe la carpeta en el sistema..."
+        exit 0
+    fi
 }
 
 main
