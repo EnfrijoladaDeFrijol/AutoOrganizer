@@ -22,6 +22,7 @@ solicitarNombreCarpeta(){
 }
 
 borrarCache(){
+    # Borramos el cache para evitar errores
     printf "\t Verificando Cache...\n"
     ubiCache=$(find ~/ -name "pip")
     #echo $ubiCache
@@ -73,8 +74,10 @@ validarCarpetaOrganizada(){
 }
 
 ordenarArchivos(){
+    printf "\t Ordenando aechivos..."
     # Archivos .txt
-    
+    echo $ubiCarpetaOrganizada
+    mv $ubiCarpeta/*.txt $ubiCarpetaOrganizada
 }
 
 main(){
