@@ -77,9 +77,13 @@ ordenarArchivos(){
     printf "\t Ordenando aechivos..."
 
     # Archivos .txt
-    echo $ubiCarpetaOrganizada
-    mkdir $ubiCarpetaOrganizada/TXTs
-    mv $ubiCarpeta/*.txt $ubiCarpetaOrganizada/TXTs
+    if [ -d "$ubiCarpetaOrganizada/TXTs" ]
+    then # Existe la carpeta de .txt
+        mv $ubiCarpeta/*.txt $ubiCarpetaOrganizada/TXTs
+    else # No existe la carpeta de .txt
+        mkdir $ubiCarpetaOrganizada/TXTs # Creamos la carpeta
+        mv $ubiCarpeta/*.txt $ubiCarpetaOrganizada/TXTs
+    fi
 }
 
 main(){
