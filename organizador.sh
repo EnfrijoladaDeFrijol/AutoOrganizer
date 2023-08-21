@@ -72,17 +72,23 @@ validarCarpetaOrganizada(){
     fi
 }
 
+ordenarArchivos(){
+    # Archivos .txt
+    
+}
+
 main(){
     imprimirTitulo
     imprimirLinea
     borrarCache
 
-    solicitarNombreCarpeta
+    solicitarNombreCarpeta # Carpeta a organizar
     buscarCarpeta # Carpeta a oganizar
     #printf "$bandera \n"
     
-    validarCarpetaOrganizada
-    
+    validarCarpetaOrganizada # Carpeta donde se organizará (se crea)
+
+    ordenarArchivos # Mandamos a ordenar los archivos
 }
 
 main
