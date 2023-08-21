@@ -28,3 +28,11 @@ chmod u+x organizador.sh
     <li>Se borrará eñl caché para el correcto funcionamiento del script</li>
     
 </ul>
+
+<h2 align="center">¿Cómo funciona?</h2>
+<p align="justify">En este apartado se menciona a muy grandes rasgos qué es lo que realiza y las carpetas que se crearán y en sí todo lo que hace el script.</p>
+<ul>
+    <li>Lo que realiza es la solicitud del nombre de la carpeta con archivos a ordenar</li>
+    <li>Comprobará si esa carpeta a ordenar existe en el SO</li>
+    
+</ul>
