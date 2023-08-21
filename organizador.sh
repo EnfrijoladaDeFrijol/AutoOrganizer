@@ -84,6 +84,14 @@ ordenarArchivos(){
         mkdir $ubiCarpetaOrganizada/TXTs # Creamos la carpeta
         mv $ubiCarpeta/*.txt $ubiCarpetaOrganizada/TXTs
     fi
+
+    # Archivos .pdf
+    if [ -d "$ubiCarpetaOrganizada/PDFs" ]
+    then # Existe la carpeta para los pdf
+        mv $ubiCarpeta/*.pdf $ubiCarpetaOrganizada/PDFs
+    else # No existe la carpeta para los pdf
+        mkdir $ubiCarpetaOrganizada/PDFs # Creamos la carpeta
+        mv $ubiCarpeta/*.pdf $ubiCarpetaOrganizada/PDFs
 }
 
 main(){
