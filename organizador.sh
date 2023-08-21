@@ -75,9 +75,11 @@ validarCarpetaOrganizada(){
 
 ordenarArchivos(){
     printf "\t Ordenando aechivos..."
+
     # Archivos .txt
     echo $ubiCarpetaOrganizada
-    mv $ubiCarpeta/*.txt $ubiCarpetaOrganizada
+    mkdir $ubiCarpetaOrganizada/TXTs
+    mv $ubiCarpeta/*.txt $ubiCarpetaOrganizada/TXTs
 }
 
 main(){
