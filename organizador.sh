@@ -73,6 +73,7 @@ validarCarpetaOrganizada(){
     fi
 }
 
+# Función donde se organizarán los archivos
 ordenarArchivos(){
     printf "\t Ordenando aechivos..."
 
@@ -91,7 +92,7 @@ ordenarArchivos(){
         mv $ubiCarpeta/*.pdf $ubiCarpetaOrganizada/PDFs
     else # No existe la carpeta para los pdf
         mkdir $ubiCarpetaOrganizada/PDFs # Creamos la carpeta
-        mv $ubiCarpeta/*.pdf $ubiCarpetaOrganizada/PDFs
+        mv $ubiCarpeta/*.pdf $ubiCarpetaOrganizada/PDFs 
 }
 
 main(){
