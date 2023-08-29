@@ -33,6 +33,7 @@ chmod u+x organizador.sh
 <p align="justify">En este apartado se menciona a muy grandes rasgos qué es lo que realiza y las carpetas que se crearán y en sí todo lo que hace el script.</p>
 <ul>
     <li>Lo que realiza es la solicitud del nombre de la carpeta con archivos a ordenar</li>
-    <li>Comprobará si esa carpeta a ordenar existe en el SO</li>
+    <li>Comprobará si esa carpeta a ordenar existe en el SO, en caso de que exista continua con el programa.</li>
+    <li>Se verificarà si existe una carpeta donde se van a ordenar los archivos ("Carpeta organizada"), en caso de que no exista se crearà, en caso contrario solo se moveràn los archivos a esa carpeta.</li>
     
 </ul>
